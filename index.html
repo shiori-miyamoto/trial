@@ -10,39 +10,43 @@
 
 <div id="global">
 
-
 <!-- header -->
 <header class="header">
     <div class="inner">
-        <div class="logo"><a href="/"><img src="/assets/img/logo.png" alt="LOGO"></a></div>
+        <div class="logo"><a href="/"><img src="/images/logo.svg" alt="LOGO"></a></div>
         <nav id="nav">
-            <ul>
-                <li><a href="/">COMCEPT<span>コンセプト</span></a></li>
-                <li><a href="/">SERVICE<span>事業内容</span></a></li>
-                <li><a href="/">WORKS<span>制作実績</span></a></li>
-                <li><a href="/">EX.DESIGN<span>デザイン事例</span></a></li>
-                <li><a href="/">BLOG<span>ブログ</span></a></li>
+            <ul class="headermenu">
+                <li class="headermenu__li"><a href="/">COMCEPT<span>コンセプト</span></a></li>
+                <li class="headermenu__li"><a href="/">SERVICE<span>事業内容</span></a></li>
+                <li class="headermenu__li"><a href="/">WORKS<span>制作実績</span></a></li>
+                <li class="headermenu__li"><a href="/">EX.DESIGN<span>デザイン事例</span></a></li>
+                <li class="headermenu__li"><a href="/">BLOG<span>ブログ</span></a></li>
             </ul>
             <div class="adresscad">
-                <address class="adresscad__tel">03-1234-5678</address>
+                <address class="adresscad__tel en"><span class="adresscad__icon"><img src="/images/Icon_awesome-phone-alt.svg" alt="tel"></span>03-1234-5678</address>
                 <div class="adresscad__hour">平日10：00～18：00</div>
             </div>
+            <div class="headercontact">
+                <a href="/contact/" class="btn_contact"><span class="btn_contact__icon"><img src="/images/Icon_material-email.svg" alt="otoiawase"></span><span class="btn_contact__txt">お問い合わせ</span></a>
+            </div>
         </nav>
-        <div class="frm_block">
-            <a href="/contact/" class="btn_contact"><span><img src="" alt=""></span><span class="txt">お問い合わせ</span></a>
-        </div>
     </div>
 </header>
     <!-- header -->
-     <div id="mainvisual">
+     <div class="mainvisual">
         <div class="inner">
-            <h1 class="ttl"><span>法人集客にフォーカスした</span><span>ホームページ制作のご提案を。</span></h1>
-            <p class="ttlsub">デザイン力×集客力で結果に繋げる</p>
+            <h1 class="mainvisual__ttl"><span>法人集客にフォーカスした</span><span>ホームページ制作のご提案を。</span></h1>
+            <p class="mainvisual__ttlsub"><span>デザイン力×集客力で結果に繋げる</span></p>
 
-            <div class=""><address>03-1234-5678</address>
-                <div>平日10：00～18：00</div>
+            <div class="mainvisualcontact">
+                <div class="mainvisualcontact__address subtextcl en"><span class="adresscad__icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="icontel" d="M15.544 11.3069L12.044 9.80685C11.8944 9.74317 11.7282 9.72981 11.5704 9.76876C11.4126 9.80772 11.2717 9.89689 11.169 10.0229L9.619 11.9169C7.18597 10.7699 5.22798 8.81188 4.081 6.37885L5.975 4.82885C6.10123 4.72631 6.1906 4.58543 6.22958 4.42754C6.26856 4.26965 6.25501 4.10335 6.191 3.95385L4.691 0.453852C4.62081 0.292487 4.49646 0.160708 4.33944 0.0812825C4.18241 0.00185718 4.00258 -0.0202247 3.831 0.0188522L0.581 0.768852C0.415776 0.807065 0.26838 0.900146 0.162862 1.03291C0.0573448 1.16567 -6.52211e-05 1.33027 5.56045e-08 1.49985C5.56045e-08 5.34549 1.52767 9.03362 4.24695 11.7529C6.96623 14.4722 10.6544 15.9999 14.5 15.9999C14.6696 15.9999 14.8342 15.9425 14.9669 15.837C15.0997 15.7315 15.1928 15.5841 15.231 15.4189L15.981 12.1689C16.0198 11.9965 15.9973 11.816 15.9174 11.6585C15.8374 11.501 15.705 11.3762 15.543 11.3059L15.544 11.3069Z" fill="currentColor"/></svg>
+                </span><address>03-1234-5678</address>
+                    <div class="mainvisualcontact__address--date subtextcl en">平日10：00～18：00</div>
+                </div>
+                <div class="mainvisualcontact__contact"><a href="/" class="btn btn-main">お問い合わせ</a></div>
+
             </div>
-            <div><a href="/" class="btn btn-main">お問い合わせ</a></div>
         </div>
     </div>
     <div class="news">
@@ -158,9 +162,9 @@
 
         </div>
     </div>
-<footer id="footer">
+<footer class="footer">
 	<div class="inner">
-        <h4><img src="" alt=""></h4>
+        <h4 class="footer__logo"><img src="\images\logo_white.png" alt=""></h4>
 		<address>〒123-456　東京都架空区架空1-1-1　KAKUビル2F</address>
         <p class="copyright">© Copyright LOGO All rights reserved.</p>
 	</div>
