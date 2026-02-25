@@ -3,6 +3,7 @@
     --white: #fff;
     --primary: #192F60;
     --green: #20868A;
+    --black: #333;
 } 
 *,
 *::before,
@@ -29,6 +30,7 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
 }
+.center { margin: 0 auto;}
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }
 address { font-style: normal; }
@@ -38,6 +40,9 @@ address { font-style: normal; }
 }
 .subtextcl {
   color: var(--white);
+}
+.black {
+  color: var(--black);
 }
 
 /* .header */
@@ -173,8 +178,8 @@ margin-right: 5px;
   font-size: 1rem;
   font-weight: 300;
 }
-.mainvisualcontact__contact {
-}
+.mainvisualcontact__contact {}
+
 .btn-main {
   display: block;
   color: var(--white);
@@ -182,7 +187,6 @@ margin-right: 5px;
   font-size: 1.25rem;
   background-color: var(--green);
   width:240px;
-
 }
 .btn-main span {
   position: relative;
@@ -202,13 +206,44 @@ margin-right: 5px;
   border-top:5px solid transparent;
   border-bottom:5px solid transparent;
   border-left:5px solid #fff;
-  
   /* アニメーション */
   transform: translateX(0);
   transition: all .4s ease;
 }
-
 .btn-main:hover span::after{
+  transform: translateX(4px);
+}
+.btn-detail {
+  display: block;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 8px 0 7px 75px;
+  font-size: 0.875rem;
+  background-color: var(--white);
+  width:240px;
+}
+.btn-detail span {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.btn-detail span::after{
+  content:"";
+  display: inline-block;
+  position:absolute;
+  right:-16px;
+  width:0;
+  height:0;
+  border-top:4px solid transparent;
+  border-bottom:4px solid transparent;
+  border-left:4px solid var(--primary);
+  /* アニメーション */
+  transform: translateX(0);
+  transition: all .4s ease;
+}
+.btn-detail:hover span::after{
   transform: translateX(4px);
 }
 
@@ -320,21 +355,23 @@ margin-right: 5px;
 /* .concept */
 .concept {
   padding-top: 100px;
+  padding-bottom: 80px;
 }
 .concept .inner { 
   max-width: 1126px;
+  /* padding-bottom: 120px; */
   margin: 0 auto;
-  position: relative;
-   background-image: url("../images/bg_dot.png");
+  background-image: url("../images/bg_dot.png");
   background-repeat: no-repeat;
   background-position: left, top;
+  position: relative;
   z-index: 1;
 }
 .concept .inner .bg_img {
   position: absolute;
-  top: 43px;
+  top: 50%;
   left: 0;
-  transform: rotate(180deg);
+  transform: translateY(-50%);
   width: 75px;
   z-index: 2;
 }
@@ -342,22 +379,421 @@ margin-right: 5px;
   display: grid;
   grid-template-columns: 480px 1fr;
   grid-template-rows: 317px 1fr;
-  padding: 120px 0 120px 188px;
-  max-width: 938px;
-  margin: 0 auto; 
+  padding: 120px 0 50px;
+  max-width: 950px;
+  margin: 0 0 0 auto;
+  position: relative;
+  z-index: 5;
 }
-.concept__content .concept__ttl {
+.concept__content .concept__content--block {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+  padding-left: 15px;
+}
+.concept__ttl {
+  font-size: 1.625rem;
+  color: var(--white);
+  text-align: right;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+}
+.concept__ttl span{
+  display: inline-block;
+  background-color: var(--primary);
+  padding: 10px 21px;
+  margin-bottom: 8px;
+}
+.concept__price {
+  font-weight: 300;
+  font-size: 1.25rem;
+  margin-left: 25px;
+  margin-top: 40px;
+}
+.concept__price strong {
+  font-weight: 400;
+  font-size: 3.75rem;
 }
 .concept__content .concept__img {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
 }
+
 .concept__content .concept__description {
   grid-column: 1 / 3;
   grid-row: 2 / 3;
+  font-size: 0.875rem;
+  padding-top: 38px;
 }
+
+/* .feature {
+  min-height: 522px;
+  background-image: url("../images/feature-image.jpg");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  padding: 50px 0;
+}
+.featuresubttl {
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+.sectionttl {
+  color: var(--white);
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+.sectionttl span {
+  display: inline-block;
+  background-color: var(--primary);
+  padding: 5px 17px;
+} */
+ 
+.feature{
+   height: 522px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background-image: url("../images/feature-image.jpg");
+  min-height: 522px;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  padding: 50px 0;
+}
+.feature .inner{
+  width: 83%;
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  counter-reset: feat;
+}
+@media screen and ( min-width:1365px ) {
+  .feature{
+    height: 522px;
+    background-size: 100% auto;
+  }
+  .feature .inner{
+    min-width: 1140px;
+  }
+}
+.feature__head{
+  padding-left: 24px;
+}
+.featuresubttl{
+  margin: 0 0 36px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: var(--primary);
+}
+.sectionttl{
+  margin: 0 0 18px;
+  color: var(--white);
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--white);
+}
+
+.sectionttl span{
+  display: inline-block;
+  padding: 10px 18px;
+  font-weight: 700;
+  letter-spacing: .03em;
+  background: var(--primary);
+  display: inline-block;
+  background-color: var(--primary);
+  padding: 5px 17px;
+}
+
+.feature__lead{
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--primary);
+  max-width: 364px;
+}
+.feature .featurepoint{
+  margin: 0;
+  padding: 22px 0;
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  column-gap: 20px;
+  max-width: 580px;
+}
+
+.feature .featurepoint:last-of-type{
+  border-bottom: none;
+}
+.feature .featurepoint::before{
+  counter-increment: feat;
+  content: counter(feat, decimal-leading-zero);
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  font-size: 6.25rem;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: .02em;
+  color: #EFF1F4;
+  display: flex;
+  align-items: flex-start;    
+  justify-content: flex-start;
+  transform: translateY(-6px);
+  user-select: none;
+}
+.feature .featurepoint:nth-of-type(1){
+  transform: translateX(190px);
+}
+.feature .featurepoint:nth-of-type(2){
+  transform: translateX(95px);
+}
+
+.feature dt,
+.feature dd{
+  grid-column: 2;
+}
+.feature dt{
+  margin: 2px 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+.feature dd{
+  margin: 0;
+  font-size: 0.875rem;
+}
+
+@media screen and ( max-width:760px ){
+  .feature{
+    height: auto; 
+    padding: 56px 0;
+    align-items: stretch;
+  }
+
+  .feature .inner{
+    grid-template-columns: 1fr;
+    row-gap: 26px;
+  }
+
+  .feature__head{
+    padding-left: 0;
+  }
+
+  .feature .featurepoint{
+    grid-template-columns: 92px 1fr;
+    padding: 18px 0;
+  }
+  
+  .feature .featurepoint::before{
+    font-size: 58px;
+    transform: translateY(-4px);
+  }
+}
+
+/* SUPPORT */
+.support{
+  position: relative;
+  padding: 80px 0 90px;
+  overflow: hidden;
+  background: #fff;
+}
+.support .inner{
+  width: 83%;
+  margin: 0 auto;
+}
+@media screen and ( min-width:1365px ) {
+.support .inner{
+    min-width: 1140px;
+  }
+}
+
+/* 
+.support .sectionttl span{
+  display: inline-block;
+  background: var(--primary);
+  color: var(--white);
+  padding: 10px 18px;
+  border-radius: 2px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: .03em;
+} */
+.support__lead{
+  margin: 0 0 34px;
+  font-size: 0.875rem;
+}
+
+/* カード群のラッパー（inner直下のdivを想定） */
+.support .inner > div{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: start;
+}
+
+/* 右側の装飾（ドット＆縦文字）※不要なら削除OK */
+/* .support::after{
+  content:"";
+  position:absolute;
+  top: 0;
+  right: -80px;
+  width: 420px;
+  height: 100%;
+  opacity: .35;
+
+  /* ドット柄 */
+ /* background-image: radial-gradient(#cfd6e6 1.2px, transparent 1.2px);
+  background-size: 10px 10px;
+  pointer-events: none;
+} */
+ .concept {
+  padding-top: 100px;
+  padding-bottom: 80px;
+}
+.support .inner { 
+  margin: 0 auto;
+  background-image: url("../images/bg_dot.png");
+  background-repeat: no-repeat;
+  background-position: right, top;
+  position: relative;
+  z-index: 1;
+}
+.support .inner .bg_img {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 78px;
+  z-index: 2;
+}
+  .supportcardwtapper{
+    max-width: 936px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+  }
+  .supportcard{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    row-gap: 14px;
+  position: relative;
+}
+.supportcard__ttl,
+.supportcard_img{
+  grid-row: 1;
+  grid-column: 1;
+}
+
+/* 画像 */
+.supportcard_img{
+  margin: 0;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.supportcard_img img{
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 16 / 10;     /* 画像の見え方を統一（不要なら削除OK） */
+  object-fit: cover;
+}
+/* 
+
+.supportcard__ttl span{
+  display: block;
+  margin-top: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: rgba(35, 63, 107, .55);
+} */
+
+/* 説明文 */
+.supportcard__txt{
+  margin: 0;
+  color: rgba(35, 63, 107, .75);
+  font-size: 13px;
+  line-height: 1.9;
+  padding-top: 2px;
+}
+
+/* ボタン */
+/* .supportcard__btn{
+  margin: 0;
+}
+
+.btn-detail{
+  display: inline-block;
+}
+
+.btn-detail a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-width: 160px;
+  padding: 10px 18px;
+  border: 1px solid rgba(35, 63, 107, .45);
+  color: #233f6b;
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  border-radius: 2px;
+  transition: .2s ease;
+} */
+
+/* 右矢印（デザイン寄せのアクセント） */
+/* .btn-detail a::after{
+  content: "›";
+  font-size: 16px;
+  line-height: 1;
+  transform: translateY(-1px);
+  opacity: .85;
+} */
+
+/* .btn-detail a:hover{
+  background: rgba(31, 63, 115, .06);
+  border-color: rgba(35, 63, 107, .65);
+} */
+
+/* =========================
+  Responsive (max-width:760px)
+========================= */
+@media screen and ( max-width:760px ){
+
+  .support{
+    padding: 56px 0 64px;
+  }
+
+  .support .sectionttl span{
+    font-size: 18px;
+    padding: 9px 14px;
+  }
+
+  .support__lead{
+    margin-bottom: 26px;
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .support .inner > div{
+    grid-template-columns: 1fr;  /* 1カラム */
+    gap: 22px;
+  }
+
+  /* 右側装飾はSPでは邪魔になりやすいので薄める/消す */
+  .support::after{ opacity: .18; right: -160px; }
+  .support::before{ display: none; }
+
+  .supportcard__ttl{
+    margin: 0 0 10px 10px;
+    padding: 9px 11px 7px;
+  }
+
+}
+
 
 .blog {
   background-image: url("../images/blog_img.png");
