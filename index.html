@@ -5,7 +5,15 @@
 <title>タイトル</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+<!-- <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/> -->
+
 <link rel="stylesheet" href="./css/base.css" media="all">
 <link rel="stylesheet" href="./css/style.css" media="all">
 </head>
@@ -19,11 +27,11 @@
         <div class="logo"><a href="/"><img src="./images/logo.svg" alt="LOGO"></a></div>
         <nav id="nav">
             <ul class="headermenu">
-                <li class="headermenu__li"><a href="/">COMCEPT<span>コンセプト</span></a></li>
-                <li class="headermenu__li"><a href="/">SERVICE<span>事業内容</span></a></li>
-                <li class="headermenu__li"><a href="/">WORKS<span>制作実績</span></a></li>
-                <li class="headermenu__li"><a href="/">EX.DESIGN<span>デザイン事例</span></a></li>
-                <li class="headermenu__li"><a href="/">BLOG<span>ブログ</span></a></li>
+                <li class="headermenu__li"><a href="/"><span class="en">COMCEPT</span><span class="inter">コンセプト</span></a></li>
+                <li class="headermenu__li"><a href="/"><span class="en">SERVICE</span><span class="inter">事業内容</span></a></li>
+                <li class="headermenu__li"><a href="/"><span class="en">WORKS</span><span class="inter">制作実績</span></a></li>
+                <li class="headermenu__li"><a href="/"><span class="en">EX.DESIGN</span><span class="inter">デザイン事例</span></a></li>
+                <li class="headermenu__li"><a href="/"><span class="en">BLOG</span><span class="inter">ブログ</span></a></li>
             </ul>
             <div class="adresscad">
                 <address class="adresscad__tel en"><span class="adresscad__icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="icontel" d="M15.544 11.3069L12.044 9.80685C11.8944 9.74317 11.7282 9.72981 11.5704 9.76876C11.4126 9.80772 11.2717 9.89689 11.169 10.0229L9.619 11.9169C7.18597 10.7699 5.22798 8.81188 4.081 6.37885L5.975 4.82885C6.10123 4.72631 6.1906 4.58543 6.22958 4.42754C6.26856 4.26965 6.25501 4.10335 6.191 3.95385L4.691 0.453852C4.62081 0.292487 4.49646 0.160708 4.33944 0.0812825C4.18241 0.00185718 4.00258 -0.0202247 3.831 0.0188522L0.581 0.768852C0.415776 0.807065 0.26838 0.900146 0.162862 1.03291C0.0573448 1.16567 -6.52211e-05 1.33027 5.56045e-08 1.49985C5.56045e-08 5.34549 1.52767 9.03362 4.24695 11.7529C6.96623 14.4722 10.6544 15.9999 14.5 15.9999C14.6696 15.9999 14.8342 15.9425 14.9669 15.837C15.0997 15.7315 15.1928 15.5841 15.231 15.4189L15.981 12.1689C16.0198 11.9965 15.9973 11.816 15.9174 11.6585C15.8374 11.501 15.705 11.3762 15.543 11.3059L15.544 11.3069Z" fill="currentColor"/></svg></span>03-1234-5678</address>
@@ -104,103 +112,141 @@
     </div>
     
     <div class="support">
-        <div class="inner">
+        <div class="innerwrapper">
             <p class="bg_img"><img src="./images/bg_service.svg" alt="SERVICE"></p>
+        <div class="inner">
         <h3 class="sectionttl"><span>WEB集客をトータルサポート</span></h3>
         <p class="support__lead black">デザインからコーディング・開発まで基本的に全ての工程を自社内で行うため、無駄な中間コストがかかりません。<br>またデザインが良いだけでなく、集客に繋がるようなご提案をいたします。</p>
         
         <div class="supportcardwtapper">
-            <bl class="supportcard">
-                <dt class="supportcard__ttl">ホームページ制作事業<span>WEBSITE DESIGN</span></dt>
-                <dd class="supportcard_img"><img src="./images/service_img_a.jpg" alt="ホームページ制作事業"></dd>
-                <dd class="supportcard__txt">事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章</dd>
-                <dd class="supportcard__btn"><a class="btn-detail center" href="/"><span>詳しく見る</span></a></dd>
-                
-            </bl>
-            <bl class="supportcard">
-                <dt class="supportcard__ttl">SEO対策事業<span>SEARCH ENGINE MARKETING</span></dt>
+            <dl class="supportcard">
+                <dt class="supportcard__ttl"><span>SEO対策事業</span><span class="en">SEARCH ENGINE MARKETING</span></dt>
                 <dd class="supportcard_img"><img src="./images/service_img_b.jpg" alt="SEO対策事業"></dd>
-                <dd class="supportcard__txt">事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章</dd>
+                <dd class="supportcard__txt black">事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章</dd>
                 <dd class="supportcard__btn"><a class="btn-detail center" href="/"><span>詳しく見る</span></a></dd>
-            </bl>
-            <bl class="supportcard">
-                <dt class="supportcard__ttl">WEB運用事業<span>WEB OPERATION</span></dt>
+            </dl>
+            <dl class="supportcard center">
+                <dt class="supportcard__ttl"><span>ホームページ制作事業</span><span class="en">WEBSITE DESIGN</span></dt>
+                <dd class="supportcard_img"><img src="./images/service_img_a.jpg" alt="ホームページ制作事業"></dd>
+                <dd class="supportcard__txt black">事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章</dd>
+                <dd class="supportcard__btn"><a class="btn-detail center" href="/"><span>詳しく見る</span></a></dd>
+            </dl>
+            <dl class="supportcard">
+                <dt class="supportcard__ttl"><span>WEB運用事業</span><span class="en">WEB OPERATION</span></dt>
                 <dd class="supportcard_img"><img src="./images/service_img_c.jpg" alt="WEB運用事業"></dd>
-                <dd class="supportcard__txt">事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章</dd>
+                <dd class="supportcard__txt black">事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章事業内容についての文章</dd>
                 <dd class="supportcard__btn"><a class="btn-detail center" href="/"><span>詳しく見る</span></a></dd>
-            </bl>
+            </dl>
 
+        </div>
         </div>
         </div>
     </div>
-    <div class="work">
-        <h3 class="sectionttl ttlright">WEB集客をトータルサポート</h3>
-        <p>BtoBのコーポレートサイトを中心に様々なWEBサイトの制作実績がございます。集客に繋がるデザインで御社の売上UPに貢献する提案をします。</p>
+</div>
 
-        <div>
-            <dl class="workcard">
+<div class="works">
+  <div class="inner">
+    <p class="bg_img"><img src="./images/bg_work.svg" alt="WORK"></p>
+    <div class="works__head">
+      <div class="works__headText">
+        <h3 class="sectionttl rightttl"><span>WEB集客をトータルサポート</span></h3>
+        <p class="works__lead black">
+          PROのコーポレートサイトを中心に様々なWEBサイトの制作実績がございます。集客に繋がるデザイン設計の為をUPに質する提案をします。
+        </p>
+      </div>
+      <div class="works__nav">
+        <button class="works__btn works__btn--prev" type="button" aria-label="前のスライド">←</button>
+        <button class="works__btn works__btn--next" type="button" aria-label="次のスライド">→</button>
+      </div>
+    </div>
+    </div>
+    <!-- スライダー -->
+    <div class="works__slider center" aria-label="制作実績スライダー">
+
+          <!-- 1枚目 -->
+          <article class="works__slide">
+           <dl class="workcard">
                 <dt class="workcard__ttl">サンプルテキスト</dt>
                 <dd class="workcard__img"><img src="./images/work_img_c.png" alt="title"></dd>
-                <dd class="workcard__txt">ろご区にある税理士事務所のコーポレートサイト。クライアントの要望とそれに対しての対応やポイントなどに関する文章が入ります。クライアントの要望とそれに対しての対応やポイントなどに関する文章が入ります。クライアントの要望とそれに対しての対応やポイントなどに関する文章が入ります。</dd>
-                <!-- <dd class="workcard__btn"><a class="btn-detail center" href="/"><span>詳しく見る</span></a></div></dd>
-                <dd class="workcard__btn"><div class="btn-work"><a href="/">デザインから別の事例を探す</a></div></dd> -->
-            </bl>
-            <dl class="workcard">
-                <dt class="workcard__ttl">下倉架空税理士事務所 様</dt>
-                <dd class="workcard__txt">ろご区にある税理士事務所のコーポレートサイト。クライアントの要望とそれに対しての対応やポイントなどに関する文章が入ります。クライアントの要望とそれに対しての対応やポイントなどに関する文章が入ります。クライアントの要望とそれに対しての対応やポイントなどに関する文章が入ります。</dd>
-                <dd class="workcard__img"><img src="./images/work_img_a.png" alt="下倉架空税理士事務所 様"></dd>
+                <dd class="workcard__txt black">ろご区にある税理士事務所のコーポレートサイト。クライアントの要望とそれに対しての対応やポイントなどに関する文章が入ります。クライアントの要望とそれに対しての対応やポイントなどに関する文章が入ります。クライアントの要望とそれに対しての対応やポイントなどに関する文章が入ります。</dd>
                 <dd class="workcard__btn">
-                    <a class="btn-detail center" href="/"><span>詳しく見る</span></a></div>
-                    <div class="btn-work"><a href="/">デザインから別の事例を探す</a></div>
+                    <a class="btn-detail center" href="/"><span>詳しく見る</span></a>
+                    <a class="btn-work center" href="/"><span>デザインから別の事例を探す</span></a>
                 </dd>
-            </bl>
-            <dl class="workcard">
-                <dt class="workcard__ttl">サンプルテキスト</dt>
-                <dd class="workcard__img"><img src="./images/work_img_b.png" alt="title"></dd>
-                <dd class="workcard__txt">ろご区にある税理士事務所のコーポレートサイト。クライアントの要望とそれに対しての対応やポイントなどに関する文章が入ります。クライアントの要望とそれに対しての対応やポイントなどに関する文章が入ります。クライアントの要望とそれに対しての対応やポイントなどに関する文章が入ります。</dd>
-                <!-- <dd class="workcard__btn"><a class="btn-detail center" href="/"><span>詳しく見る</span></a></div></dd>
-                <dd class="workcard__btn"><div class="btn-work"><a href="/">デザインから別の事例を探す</a></div></dd> -->
-            </bl>
+            </dl>
+          </article>
+          <!-- 2枚目-->
+          <article class="works__slide centerSlide">
+              <dl class="workcard">
+                  <dt class="workcard__ttl">下倉架空税理士事務所 様</dt>
+                  <dd class="workcard__img"><img src="./images/work_img_a.png" alt="title"></dd>
+                  <dd class="workcard__txt black">ろご区にある税理士事務所のコーポレートサイト。クライアントの要望とそれに対しての対応やポイントなどに関する文章が入ります。クライアントの要望とそれに対しての対応やポイントなどに関する文章が入ります。クライアントの要望とそれに対しての対応やポイントなどに関する文章が入ります。</dd>
+                  <dd class="workcard__btn">
+                      <a class="btn-detail center" href="/"><span>詳しく見る</span></a>
+                      <a class="btn-work center" href="/"><span>デザインから別の事例を探す</span></a>
+                    </dd>
+                </dl>
+            </article>
+        <!-- 3枚目-->
+           <article class="works__slide">
+              <dl class="workcard">
+                  <dt class="workcard__ttl">サンプルテキスト</dt>
+                  <dd class="workcard__img"><img src="./images/work_img_b.png" alt="title"></dd>
+                  <dd class="workcard__txt black">ろご区にある税理士事務所のコーポレートサイト。クライアントの要望とそれに対しての対応やポイントなどに関する文章が入ります。クライアントの要望とそれに対しての対応やポイントなどに関する文章が入ります。クライアントの要望とそれに対しての対応やポイントなどに関する文章が入ります。</dd>
+                  <dd class="workcard__btn">
+                      <a class="btn-detail center" href="/"><span>詳しく見る</span></a>
+                      <a class="btn-work center" href="/"><span>デザインから別の事例を探す</span></a>
+                    </dd>
+                </dl>
+            </article>
+           
         </div>
     </div>
+    
     <div class="blog">
+        <div class="inner">
+            <p class="bg_img"><img src="./images/bg_blog.svg" alt="BLOG"></p>
         <ul>
-            <li>
-                <div class="news__article"><p class="news__date">2020/00/00</p><p><a href="/">タイトルテキストリンクタイトルテキストリンクタイトルテキストリンク</a></p></div>
+            <li class="blog__list">
+                <div class="news__article"><p class="news__article--date quicksand">2020/00/00</p><p class="news__article--ttl"><a href="/">タイトルテキストリンクタイトルテキストリンクタイトルテキストリンク</a></p></div>                
             </li>
-            <li>
-                <div class="news__article"><p class="news__date">2020/00/00</p><p><a href="/">タイトルテキストリンクタイトルテキストリンクタイトルテキストリンク</a></p></div>
+            <li class="blog__list">
+                <div class="news__article"><p class="news__article--date quicksand">2020/00/00</p><p class="news__article--ttl"><a href="/">タイトルテキストリンクタイトルテキストリンクタイトルテキストリンク</a></p></div>                
             </li>
-            <li>
-                <div class="news__article"><p class="news__date">2020/00/00</p><p><a href="/">タイトルテキストリンクタイトルテキストリンクタイトルテキストリンク</a></p></div>
+            <li class="blog__list">
+                <div class="news__article"><p class="news__article--date quicksand">2020/00/00</p><p class="news__article--ttl"><a href="/">タイトルテキストリンクタイトルテキストリンクタイトルテキストリンク</a></p></div>                
             </li>
-            <li>
-                <div class="news__article"><p class="news__date">2020/00/00</p><p><a href="/">タイトルテキストリンクタイトルテキストリンクタイトルテキストリンク</a></p></div>
-            </li>
-            <li>
-                <div class="news__article"><p class="news__date">2020/00/00</p><p><a href="/">タイトルテキストリンクタイトルテキストリンクタイトルテキストリンク</a></p></div>
+            <li class="blog__list">
+                <div class="news__article"><p class="news__article--date quicksand">2020/00/00</p><p class="news__article--ttl"><a href="/">タイトルテキストリンクタイトルテキストリンクタイトルテキストリンク</a></p></div>                
             </li>
         </ul>
-        
-
     </div>
-    <div class="footercontact">
-        <p>お気軽にお問い合わせください！<br>サクッと概算見積書を作成します</p>
-        <div class="flex">
-            <div class=""><address>03-1234-5678</address>
-                    <div>平日10：00～18：00</div>
-                </div>
-            <div><a href="/" class="btn-main">お問い合わせ</a></div>
+    </div>
 
+    <div class="footercontact">
+        <div class="inner">
+            <p class="footercontact__lead">お気軽にお問い合わせください！<br>サクッと概算見積書を作成します</p>
+            <div class="mainvisualcontact">
+                <div class="mainvisualcontact__address subtextcl en"><span class="adresscad__icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="icontel" d="M15.544 11.3069L12.044 9.80685C11.8944 9.74317 11.7282 9.72981 11.5704 9.76876C11.4126 9.80772 11.2717 9.89689 11.169 10.0229L9.619 11.9169C7.18597 10.7699 5.22798 8.81188 4.081 6.37885L5.975 4.82885C6.10123 4.72631 6.1906 4.58543 6.22958 4.42754C6.26856 4.26965 6.25501 4.10335 6.191 3.95385L4.691 0.453852C4.62081 0.292487 4.49646 0.160708 4.33944 0.0812825C4.18241 0.00185718 4.00258 -0.0202247 3.831 0.0188522L0.581 0.768852C0.415776 0.807065 0.26838 0.900146 0.162862 1.03291C0.0573448 1.16567 -6.52211e-05 1.33027 5.56045e-08 1.49985C5.56045e-08 5.34549 1.52767 9.03362 4.24695 11.7529C6.96623 14.4722 10.6544 15.9999 14.5 15.9999C14.6696 15.9999 14.8342 15.9425 14.9669 15.837C15.0997 15.7315 15.1928 15.5841 15.231 15.4189L15.981 12.1689C16.0198 11.9965 15.9973 11.816 15.9174 11.6585C15.8374 11.501 15.705 11.3762 15.543 11.3059L15.544 11.3069Z" fill="currentColor"/></svg>
+                    </span><address>03-1234-5678</address>
+                    <div class="mainvisualcontact__address--date subtextcl en">平日10：00～18：00</div>
+                </div>
+                <div class="mainvisualcontact__contact"><a href="/" class="btn-main"><span>お問い合わせ</span></a></div>
+            </div>
         </div>
     </div>
 <footer class="footer">
 	<div class="inner">
-        <h4 class="footer__logo"><img src="./images/logo_white.png" alt=""></h4>
+        <h4 class="footer__logo"><img src="./images/logo_white.svg" alt=""></h4>
 		<address>〒123-456　東京都架空区架空1-1-1　KAKUビル2F</address>
         <p class="copyright">© Copyright LOGO All rights reserved.</p>
 	</div>
 </footer>
 </div>
+<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="./slick/slick.min.js"></script>
+<script src="./js/function.js"></script> -->
 </body>
 </html>
