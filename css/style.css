@@ -22,6 +22,8 @@ body {
   font-size: 1rem;
   color: #192F60;
   background-color: #fff;
+  overflow-x: hidden;
+
 }
 .en {
   font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
@@ -126,6 +128,150 @@ margin-right: 5px;
   display: block;
   font-size: 0.813rem;
 }
+/* =========================
+   HEADER: Responsive (<=760px)
+========================= */
+ /* PCではハンバーガー非表示 */
+  .hamburger{
+    display: none;
+  }
+@media screen and (max-width: 760px) {
+
+  .header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 64px;
+    box-shadow: 0 2px 14px rgba(0,0,0,.06);
+  }
+
+  .header .inner{
+    height: 64px;
+    padding: 0 16px;
+    justify-content: space-between;
+  }
+
+  .header .logo{
+    padding-left: 0; /* PC:56px → SPは詰める */
+  }
+  .header .logo img{
+    height: 28px;
+    width: auto;
+  }
+
+  .adresscad,
+  .headercontact{
+    display: none;
+  }
+
+  .hamburger{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 52px;
+    height: 52px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    margin-left: auto;
+  }
+  .hamburger__line{
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: var(--primary);
+    border-radius: 999px;
+    transition: transform .25s ease, opacity .2s ease;
+  }
+  .hamburger__text{
+    font-size: 10px;
+    letter-spacing: .12em;
+    color: var(--primary);
+    line-height: 1;
+    margin-top: 2px;
+  }
+
+  /* ナビ：SPでは全画面ドロワー */
+  #nav{
+    position: fixed;
+    inset: 64px 0 0 0;
+    background: rgba(255,255,255,.98);
+    backdrop-filter: blur(6px);
+    display: block;   
+    transform: translateY(-8px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+    height: calc(100dvh - 64px);
+    overflow: auto;
+    padding: 24px 16px 40px;
+    
+  }
+
+  /* メニュー縦積み */
+  #nav .headermenu{
+    flex-direction: column;
+    align-items: stretch;
+    margin-right: 0;
+    padding: 0;
+    gap: 0;
+  }
+  .headermenu__li{
+    margin-right: 0 !important;
+    border-bottom: 1px solid rgba(25,47,96,.12);
+  }
+  .headermenu__li a{
+    display: block;
+    padding: 16px 8px;
+  }
+  .headermenu__li .inter{
+    margin-top: 3px;
+  }
+
+  /* 「お問い合わせ」もドロワー内で表示したい場合 */
+  #nav .headercontact{
+    display: block;
+    margin-top: 16px;
+  }
+  #nav .btn_contact{
+    width: 90%;
+    display: block;
+    height: auto;
+    padding: 14px 0;
+    border-radius: 6px;
+    margin: 0 auto;
+  }
+
+  /* 開いた状態（JSが .is-open を付ける） */
+  .header.is-open #nav{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+    margin-left: 0;
+    width: 100vw;
+  }
+
+  /* ハンバーガー → × */
+  .header.is-open .hamburger__line:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+  }
+  .header.is-open .hamburger__line:nth-child(2){
+    opacity: 0;
+  }
+  .header.is-open .hamburger__line:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* メニューオープン中は背景スクロール停止（JSが body.is-lock 付与） */
+  body.is-lock{
+    overflow: hidden;
+  }
+}
+
 
 .mainvisual {
   background-image: url("../images/top.jpg");
@@ -188,7 +334,6 @@ margin-right: 5px;
   font-size: 1rem;
   font-weight: 300;
 }
-.mainvisualcontact__contact {}
 
 .btn-main {
   display: block;
@@ -312,7 +457,6 @@ margin-right: 5px;
   opacity: 1;
 }
 
-/* “SCROLL”文字（縦書き風） */
 .scroll-down__text{
   font-size: 0.625rem;
   letter-spacing: .22em;
@@ -321,7 +465,6 @@ margin-right: 5px;
   text-orientation: mixed;
 }
 
-/* 縦線（中に動く点を擬似要素で） */
 .scroll-down__line{
   position: relative;
   width: 2px;
@@ -331,7 +474,6 @@ margin-right: 5px;
   overflow: hidden;
 }
 
-/* 動く点（上から下へ流れる） */
 .scroll-down__line::after{
   content: "";
   position: absolute;
@@ -402,7 +544,6 @@ margin-right: 5px;
 }
 .concept .inner { 
   max-width: 1126px;
-  /* padding-bottom: 120px; */
   margin: 0 auto;
   background-image: url("../images/bg_dot.png");
   background-repeat: no-repeat;
@@ -467,29 +608,6 @@ margin-right: 5px;
   font-size: 0.875rem;
   padding-top: 38px;
 }
-
-/* .feature {
-  min-height: 522px;
-  background-image: url("../images/feature-image.jpg");
-  background-size: auto 100%;
-  background-repeat: no-repeat;
-  padding: 50px 0;
-}
-.featuresubttl {
-  font-size: 1.25rem;
-  font-weight: 500;
-  letter-spacing: 0.1rem;
-}
-.sectionttl {
-  color: var(--white);
-  font-size: 1.75rem;
-  font-weight: 500;
-}
-.sectionttl span {
-  display: inline-block;
-  background-color: var(--primary);
-  padding: 5px 17px;
-} */
  
 .feature{
    height: 522px;
@@ -888,18 +1006,17 @@ margin-right: 5px;
 }
 
 .works__slider {
-  width: 120%;
+  width: 100%;
   position: relative;
   z-index: 5;
-  margin-left: -10%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  gap: auto;
 }
 
 .works__slide {
   width: 32%;
-  min-width: 450px;
+  max-width: 450px;
 }
 .works__slide:not(.centerSlide) {
   margin-top: 30px;
@@ -911,6 +1028,9 @@ margin-right: 5px;
 .works__slide.centerSlide .workcard__img{
   width:102%;
   margin: 0 auto;
+}
+.works__slide:nth-of-type(3) .workcard__img{
+  margin: 0 0 0 auto;
 }
 .workcard{
   display: flex;
@@ -953,9 +1073,6 @@ margin-right: 5px;
   width: 100%;
   }
 }
-
-
-
 
 /* 右上：丸い矢印ボタン */
 .works__nav{

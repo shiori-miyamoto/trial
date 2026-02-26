@@ -2,11 +2,8 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>タイトル</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Quicksand&display=swap" rel="stylesheet">
@@ -25,13 +22,22 @@
 <header class="header">
     <div class="inner">
         <div class="logo"><a href="/"><img src="./images/logo.svg" alt="LOGO"></a></div>
+        
+ <!-- ハンバーガーボタン -->
+    <button class="hamburger" type="button" aria-controls="nav" aria-expanded="false">
+      <span class="hamburger__line" aria-hidden="true"></span>
+      <span class="hamburger__line" aria-hidden="true"></span>
+      <span class="hamburger__line" aria-hidden="true"></span>
+      <span class="hamburger__text">MENU</span>
+    </button>
+
         <nav id="nav">
             <ul class="headermenu">
-                <li class="headermenu__li"><a href="/"><span class="en">COMCEPT</span><span class="inter">コンセプト</span></a></li>
-                <li class="headermenu__li"><a href="/"><span class="en">SERVICE</span><span class="inter">事業内容</span></a></li>
-                <li class="headermenu__li"><a href="/"><span class="en">WORKS</span><span class="inter">制作実績</span></a></li>
-                <li class="headermenu__li"><a href="/"><span class="en">EX.DESIGN</span><span class="inter">デザイン事例</span></a></li>
-                <li class="headermenu__li"><a href="/"><span class="en">BLOG</span><span class="inter">ブログ</span></a></li>
+                <li class="headermenu__li"><a href="/"><span class="">COMCEPT</span><span class="inter">コンセプト</span></a></li>
+                <li class="headermenu__li"><a href="/"><span class="">SERVICE</span><span class="inter">事業内容</span></a></li>
+                <li class="headermenu__li"><a href="/"><span class="">WORKS</span><span class="inter">制作実績</span></a></li>
+                <li class="headermenu__li"><a href="/"><span class="">EX.DESIGN</span><span class="inter">デザイン事例</span></a></li>
+                <li class="headermenu__li"><a href="/"><span class="">BLOG</span><span class="inter">ブログ</span></a></li>
             </ul>
             <div class="adresscad">
                 <address class="adresscad__tel en"><span class="adresscad__icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="icontel" d="M15.544 11.3069L12.044 9.80685C11.8944 9.74317 11.7282 9.72981 11.5704 9.76876C11.4126 9.80772 11.2717 9.89689 11.169 10.0229L9.619 11.9169C7.18597 10.7699 5.22798 8.81188 4.081 6.37885L5.975 4.82885C6.10123 4.72631 6.1906 4.58543 6.22958 4.42754C6.26856 4.26965 6.25501 4.10335 6.191 3.95385L4.691 0.453852C4.62081 0.292487 4.49646 0.160708 4.33944 0.0812825C4.18241 0.00185718 4.00258 -0.0202247 3.831 0.0188522L0.581 0.768852C0.415776 0.807065 0.26838 0.900146 0.162862 1.03291C0.0573448 1.16567 -6.52211e-05 1.33027 5.56045e-08 1.49985C5.56045e-08 5.34549 1.52767 9.03362 4.24695 11.7529C6.96623 14.4722 10.6544 15.9999 14.5 15.9999C14.6696 15.9999 14.8342 15.9425 14.9669 15.837C15.0997 15.7315 15.1928 15.5841 15.231 15.4189L15.981 12.1689C16.0198 11.9965 15.9973 11.816 15.9174 11.6585C15.8374 11.501 15.705 11.3762 15.543 11.3059L15.544 11.3069Z" fill="currentColor"/></svg></span>03-1234-5678</address>
@@ -246,7 +252,7 @@
 </div>
 <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="./slick/slick.min.js"></script>
-<script src="./js/function.js"></script> -->
+<script type="text/javascript" src="./slick/slick.min.js"></script> -->
+<script src="./js/function.js"></script>
 </body>
 </html>
