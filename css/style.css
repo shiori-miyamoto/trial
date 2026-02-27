@@ -25,11 +25,7 @@ body {
   background-color: #fff;
   overflow-x: hidden;
 }
-/* @media screen and (max-width: 760px) {
-  body {
-    overflow-x: hidden;
-  }
-} */
+
 .en {
   font-family: "Arial", "Helvetica Neue", Helvetica, sans-serif;
 }
